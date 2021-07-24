@@ -276,6 +276,7 @@ class DHTServer:
         """
         tid = msg[b"t"]
         try:
+            self.logger.info(f"announce阶段发现数据，但是不知道是什么{msg}")
             info_hash = msg[b"a"][b"info_hash"]
             self.save_magnet(info_hash)
         except KeyError:
