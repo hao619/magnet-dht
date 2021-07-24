@@ -8,9 +8,9 @@ from .database import RedisClient
 
 #SAVE_PATH = ".\\torrents"
 SAVE_PATH = "/home/guohao/magnet-dht/torrents"
-STOP_TIMEOUT = 60
+STOP_TIMEOUT = 120
 MAX_CONCURRENT = 30
-MAX_MAGNETS = 256
+MAX_MAGNETS = 300 * 6 * 10
 
 ARIA2RPC_ADDR = "127.0.0.1"
 ARIA2RPC_PORT = 6800
