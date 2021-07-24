@@ -256,7 +256,9 @@ class DHTServer:
         tid = msg[b"t"]
         try:
             info_hash = msg[b"a"][b"info_hash"]
-            self.save_magnet(info_hash)
+            # 网友描述该阶段信息无效
+            #self.save_magnet(info_hash)
+            self.logger.info(f"pid_{self.process_id} - get_peers信息无效：{info_hash}")
         except KeyError:
             # 没有对应的 info hash，发送错误回复
             self.send_error(tid, address)
