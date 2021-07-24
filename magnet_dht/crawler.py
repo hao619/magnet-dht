@@ -70,7 +70,8 @@ PER_NID_LEN = 20
 # 执行 bs 定时器间隔（秒）
 PER_SEC_BS_TIMER = 8
 # 是否使用全部进程
-MAX_PROCESSES = cpu_count() // 2 or cpu_count()
+# MAX_PROCESSES = cpu_count() // 2 or cpu_count()
+MAX_PROCESSES = 1
 
 
 class HNode:

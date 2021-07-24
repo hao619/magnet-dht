@@ -6,7 +6,8 @@ import json
 
 from .database import RedisClient
 
-SAVE_PATH = ".\\torrents"
+#SAVE_PATH = ".\\torrents"
+SAVE_PATH = "/home/guohao/magnet-dht/torrents"
 STOP_TIMEOUT = 60
 MAX_CONCURRENT = 16
 MAX_MAGNETS = 256
@@ -52,6 +53,7 @@ def exec_rpc(magnet):
     )
 
     res = json.loads(conn.getresponse().read())
+    print(f"申请下载种子:{magnet}")
     if "error" in res:
         print("Aria2c replied with an error:", res["error"])
 
