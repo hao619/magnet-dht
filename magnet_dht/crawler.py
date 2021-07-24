@@ -300,12 +300,12 @@ class DHTServer:
                 # 使用 bdecode 解码返回数据
                 msg = bencoder.bdecode(data)
                 
-                self.logger.warning(msg)
                 # 处理返回信息
                 self.on_message(msg, address)
                 time.sleep(SLEEP_TIME)
             except Exception as e:
                 self.logger.warning(e)
+                self.logger.warning(msg)
                 self.logger.warning(str(data))
 
 
