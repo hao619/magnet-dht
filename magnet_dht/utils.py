@@ -62,6 +62,6 @@ def get_logger(logger_name):
     logger = logging.getLogger(logger_name)
     logger.setLevel(LOG_LEVEL)
     fh = logging.StreamHandler()
-    fh.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+    fh.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(lineno)s - %(message)s"))
     logger.addHandler(fh)
     return logger
