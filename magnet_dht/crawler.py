@@ -258,7 +258,9 @@ class DHTServer:
             info_hash = msg[b"a"][b"info_hash"]
             # 网友描述该阶段信息无效
             #self.save_magnet(info_hash)
-            self.logger.info(f"pid_{self.process_id} - get_peers信息无效：{info_hash}")
+            hex_info_hash = codecs.getencoder("hex")(info_hash)[0].decode()
+            magnet = MAGNET_PER.format(hex_info_hash)
+            self.logger.info(f"pid_{self.process_id} - get_peers信息无效：{magnet}")
         except KeyError:
             # 没有对应的 info hash，发送错误回复
             self.send_error(tid, address)
