@@ -35,4 +35,5 @@ class RedisClient:
         """
         返回指定数量的磁力链接
         """
-        return self.redis.srandmember(REDIS_KEY, count)
+        return self.redis.spop(REDIS_KEY, count)
+        # return self.redis.srandmember(REDIS_KEY, count)
