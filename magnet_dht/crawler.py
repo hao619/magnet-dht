@@ -304,6 +304,7 @@ class DHTServer:
                 time.sleep(SLEEP_TIME)
             except Exception as e:
                 self.logger.warning(e)
+                self.logger.warning(data)
 
 
 def _start_thread(offset):
