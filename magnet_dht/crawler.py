@@ -18,6 +18,16 @@ BOOTSTRAP_NODES = [
     "udp://tracker.open-internet.nl:6969/announce",
     "udp://tracker.coppersurfer.tk:6969/announce",
     "udp://exodus.desync.com:6969/announce",
+    "http://bt.rghost.net:80/announce",
+    "http://carbon-bonsai-621.appspot.com:80/announce",
+    "http://explodie.org:6969/announce",
+    "http://googer.cc:1337/announce",
+    "http://h4.trakx.nibba.trade:80/announce",
+    "http://kinorun.com:80/announce.php",
+    "http://milanesitracker.tekcities.com:80/announce",
+    "http://nyaa.tracker.wf:7777/announce",
+    "http://opentracker.xyz:80/announce",
+    "http://share.camoe.cn:8080/announce",
     "udp://tracker.opentrackr.org:1337/announce",
     "udp://tracker.internetwarriors.net:1337/announce",
     "udp://9.rarbg.to:2710/announce",
@@ -38,7 +48,10 @@ BOOTSTRAP_NODES = [
     ("router.bittorrent.com", 6881),
     ("dht.transmissionbt.com", 6881),
     ("router.utorrent.com", 6881),
+    ("router.bitcomet.com", 6881),
+    ("dht.aelitis.com", 6881),
 ]
+
 
 # 双端队列容量
 MAX_NODE_QSIZE = 10000
@@ -47,7 +60,7 @@ UDP_RECV_BUFFSIZE = 65535
 # 服务 host
 SERVER_HOST = "0.0.0.0"
 # 服务端口
-SERVER_PORT = 9090
+SERVER_PORT = 29090
 # 磁力链接前缀
 MAGNET_PER = "magnet:?xt=urn:btih:{}"
 # while 循环休眠时间
