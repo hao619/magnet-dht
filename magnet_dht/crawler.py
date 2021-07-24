@@ -229,6 +229,7 @@ class DHTServer:
                 elif msg[b"q"] == b"announce_peer":
                     self.on_announce_peer_request(msg, address)
         except KeyError:
+            self.logger.error("on message keyError")
             pass
 
     def on_find_node_response(self, msg):
